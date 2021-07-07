@@ -1,0 +1,102 @@
+<div class='container chatBoxRow'>
+    <div class='row'>
+        <div class='col-sm-1' (click)='resetSelectedChat()'> </div>
+        <div class='col-sm-10 chatBox'>
+            <div class='row'>
+                <div class='col-sm-4 chatSideBar'>
+                     <!--   
+                        just to check if more chats are displayed properly
+                        <div *ngFor='let i of [].constructor(20);' class='row chats' style="margin-left: 0; margin-right: 0;">
+                            <div class='col-sm-4' style="padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+                                <img src='../../assets/images/amy.jpg' height="70px" width="70px" style="border-radius: 50px;">
+                            </div>
+                            <div class='col-sm-8' style="padding-right: 0px; padding-left: 0px; padding-top: 10px; padding-bottom: 10px;">
+                                <div class='row'>
+                                    <div class='col-sm-12'>
+                                        Amy
+                                    </div>
+                                </div>
+                                <div class='row'>
+                                    <div class='col-sm-12'>
+                                        Status
+                                    </div>
+                                </div>
+                            </div>
+                        </div> --->
+                        <div (click)='seeChat(i)' *ngFor='let user of users; index as i;' [class.rowColor]='selectedChats[i]==1' class='row chats'>
+                            <div class='col-sm-4 profileImage'>
+                                <img class="profilePicture" src="{{'../'+user['picture_data']['src']}}">
+                            </div>
+                            <div class='col-sm-8 userInfo'>
+                                <div class='row'>
+                                    <div class='col-sm-12 userName'>
+                                        {{user["name"]}}
+                                    </div>
+                                </div>
+                                <div class='row'>
+                                    <div class='col-sm-12 userStatus'>
+                                        {{user["status"]}}
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class='hrStyle' [class.hrColor]='selectedChats[i]==1'> 
+                        </div>
+                </div>
+                <div class='col-sm-8 chatArea' *ngIf='noChatSelected!=-1'>
+                    <div class="row chatAreaMessage" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+                        <div class='col-sm-12'>
+                            <div class='messages_background'>
+                                <div *ngFor='let u of users[noChatSelected]["messages"]'>
+                                    <div class='row'>
+                                        <div class='col-sm-12 leftMessage' *ngIf="u['type']=='received'">
+                                             <div class="speechBubbleLeft triangleLeft roundBubble">
+                                                <div class="talktext">
+                                                    {{u['content']}} <br>
+                                                    {{u['displayTime']}}
+                                                </div>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class='row'>
+                                        <div class='col-sm-12 rightMessage' *ngIf="u['type']=='sent'">
+                                             <div class="speechBubbleReft triangleRight roundBubble">
+                                                <div class="talktext">
+                                                    {{u['content']}} <br>
+                                                    {{u['displayTime']}}
+                                                </div>
+                                              </div> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                    <div class='sendField'>
+                        <div class='col-sm-12 input-group'>
+                            <input class='padding_input' (keydown.enter)="sendMessage()" type="text" [(ngModel)]='textInput' class="form-control" style="width: 70%;">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-primary padding_input" type="button" (click)='sendMessage()'>Send</button>
+                            </div>      
+                        </div>
+                    </div>
+                </div>
+                <div class='col-sm-8 noChatSelectedBox' *ngIf='noChatSelected==-1'>
+                    <div class="container imageChatNotSelected">
+                        <img class='imageBackground' src="../../assets/images/back.png">
+                        <div class="centered">
+                            <div class='row'>
+                                <div class='col-sm-12'>
+                                    Please select chat to start conversation
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='col-sm-1' (click)='resetSelectedChat()'> </div>
+    </div>
+</div>
+
+
+

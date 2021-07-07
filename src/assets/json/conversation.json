@@ -1,0 +1,143 @@
+[
+  {
+    "name": "John",
+    "status": "This is my status",
+    "picture_data":
+      {
+        "src": "../assets/images/john.jpg",
+        "alt": "John"
+      }
+    ,
+    "messages": [
+      {
+        "time": 1620365858,
+        "content": "Nice to meet you",
+        "type": "received"
+      },
+      {
+        "time": 1620365734,
+        "content": "My name is John",
+        "type": "received"
+      },
+      {
+        "time": 1620365674,
+        "content": "Hi whats your name?",
+        "type": "sent"
+      },
+      {
+        "time": 1620365794,
+        "content": "And where do you live?",
+        "type": "sent"
+      },
+      {
+        "time": 1620365854,
+        "content": "I live near the city center",
+        "type": "received"
+      },
+      {
+        "time": 1620365974,
+        "content": "I am really glad to have met you :)",
+        "type": "sent"
+      }
+    ]
+  },
+  {
+    "name": "Amy",
+    "status": "I love oranges!",
+    "picture_data" :
+      {
+        "src": "../assets/images/amy.jpg",
+        "alt": "Amy"
+      }
+    ,
+    "messages": [
+      {
+        "time": 1620365674,
+        "content": "Hi mate!",
+        "type": "received"
+      },
+      {
+        "time": 1620365690,
+        "content": "Hey what`s up?",
+        "type": "sent"
+      },
+      {
+        "time": 1620365750,
+        "content": "Need your help with my essay",
+        "type": "received"
+      },
+      {
+        "time": 1620365810,
+        "content": "Okay, what is the theme?",
+        "type": "sent"
+      },
+      {
+        "time": 1620365870,
+        "content": "Oranges.. :)",
+        "type": "received"
+      },
+      {
+        "time": 1620365879,
+        "content": "wow, oranges, really?",
+        "type": "sent"
+      }
+    ]
+  },
+  {
+    "name": "Jack",
+    "status": "Hello, I'm Jack",
+    "picture_data" :
+      {
+        "src": "../assets/images/jack.jpg",
+        "alt": "Jack"
+      }
+    ,
+    "messages": [
+      {
+        "time": 1620394800,
+        "content": "Where are you?",
+        "type": "received"
+      },
+      {
+        "time": 1620394860,
+        "content": "At class, you?",
+        "type": "sent"
+      },
+      {
+        "time": 1620394890,
+        "content": "Finished with classes, meet in caffe later?",
+        "type": "received"
+      },
+      {
+        "time": 1620395010,
+        "content": "Sure, bring me the book please :)",
+        "type": "sent"
+      },
+      {
+        "time": 1620395100,
+        "content": "What book, I forgot",
+        "type": "received"
+      },
+      {
+        "time": 1620395130,
+        "content": "Microeconomy",
+        "type": "sent"
+      },
+      {
+        "time": 1620395190,
+        "content": "No problem! :)",
+        "type": "received"
+      },
+      {
+        "time": 1620395195,
+        "content": "See you..",
+        "type": "received"
+      },
+      {
+        "time": 1620395435,
+        "content": "Thanks, see you later",
+        "type": "sent"
+      }
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+.nav {
+    background-color: rgba(0,128,193,255);
+    height: 50px;
+    box-shadow: 0 4px 10px -1px rgb(34, 34, 34);
+}
+
+.image{
+    height: 20px;
+    width: 210px;
+    margin-top: 14px;
+    margin-left: 15px;
+}
